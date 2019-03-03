@@ -1,7 +1,11 @@
 const path = require('path')
+let appEnv = process.env.APP_ENV
+let watch = appEnv === 'development'
 
 module.exports = {
   entry: './src/index.js',
+  mode: appEnv,
+  watch: watch,
   output: {
     filename: 'bundle.min.js',
     path: path.resolve('./dist')

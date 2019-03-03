@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "APP_ENV=production webpack",
+    "build-dev": "APP_ENV=development webpack",
     "server": "webpack-dev-server"
   },
   "repository": {

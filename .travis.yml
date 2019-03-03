@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - 10
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+
+install:
+  - npm install
+
+script:
+  - npm run build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  target-branch: master
+  repo: nicolaslechenic/nicolaslechenic.github.io
+  github-token: $GITHUB_NLC_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: master

@@ -7,7 +7,7 @@ module.exports = {
     path: path.resolve('./dist')
   },
   devServer: {
-    contentBase: path.resolve('./'),
+    contentBase: path.resolve('./dist/'),
     compress: true,
     historyApiFallback: true,
     port: 3210
